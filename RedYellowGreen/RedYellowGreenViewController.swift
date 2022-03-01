@@ -23,7 +23,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUserInterface()
-        
     }
     
     // MARK: - IBActions
@@ -34,9 +33,9 @@ class ViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUserInterface() {
-        redLightView.layer.cornerRadius = 80
-        yellowLightView.layer.cornerRadius = 80
-        greenLightView.layer.cornerRadius = 80
+        redLightView.layer.cornerRadius = redLightView.frame.width / 2
+        yellowLightView.layer.cornerRadius = yellowLightView.frame.width / 2
+        greenLightView.layer.cornerRadius = greenLightView.frame.width / 2
         startNextButton.layer.cornerRadius = 10
         
         redLightView.alpha = 0.3
@@ -59,7 +58,6 @@ class ViewController: UIViewController {
             counterForButton = 1
         }
     }
-    
     
 }
 
