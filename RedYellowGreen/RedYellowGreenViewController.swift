@@ -16,17 +16,20 @@ class ViewController: UIViewController {
     
     @IBOutlet var startNextButton: UIButton!
     
+    // MARK: - Private Properties
+    private var counterForButton = 1
+    
     // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUserInterface()
+        
     }
     
-    
-
     // MARK: - IBActions
     @IBAction func startNextButtonPressed(_ sender: Any) {
         startNextButton.setTitle("NEXT", for: .normal)
+        changeTheLight()
     }
     
     // MARK: - Private Methods
@@ -39,6 +42,22 @@ class ViewController: UIViewController {
         redLightView.alpha = 0.3
         yellowLightView.alpha = 0.3
         greenLightView.alpha = 0.3
+    }
+    
+    private func changeTheLight() {
+        if counterForButton == 1 {
+            redLightView.alpha = 1
+            greenLightView.alpha = 0.3
+            counterForButton += 1
+        } else if counterForButton == 2 {
+            redLightView.alpha = 0.3
+            yellowLightView.alpha = 1
+            counterForButton += 1
+        } else if counterForButton == 3 {
+            yellowLightView.alpha = 0.3
+            greenLightView.alpha = 1
+            counterForButton = 1
+        }
     }
     
     
