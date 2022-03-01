@@ -22,6 +22,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startNextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WJ6-qJ-EOx"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="MVL-d5-0yM">
                                 <rect key="frame" x="127" y="81" width="160" height="540"/>
@@ -61,10 +64,16 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jVS-kG-J5j" secondAttribute="trailing" constant="120" id="xqY-FH-kTh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLightView" destination="mwg-VE-4wc" id="TG2-cf-9eX"/>
+                        <outlet property="redLightView" destination="FFh-C9-Q0H" id="bKb-CV-oqg"/>
+                        <outlet property="startNextButton" destination="jVS-kG-J5j" id="hN7-Bp-08E"/>
+                        <outlet property="yellowLightView" destination="NXT-uL-Lex" id="YyY-Pn-1yK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-152.17391304347828" y="71.651785714285708"/>
+            <point key="canvasLocation" x="310" y="102"/>
         </scene>
     </scenes>
     <resources>
