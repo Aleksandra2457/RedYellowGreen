@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RedYellowGreenViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet var redLightView: UIView!
